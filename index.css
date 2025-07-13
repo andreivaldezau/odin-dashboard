@@ -71,6 +71,10 @@ h2 {
   font-size: large;
 }
 
+h3 {
+  font-size: medium;
+}
+
 body {
   min-height: 100vh;
   display: grid;
@@ -156,8 +160,45 @@ main > * {
   border-radius: 8px;
   border-left: 8px solid var(--card-orange);
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .icon-group {
   display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+button.icon {
+  height: 32px;
+  width: 32px;
+  border-radius: 35%;
+  border-color: transparent;
+  background-color: transparent;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+button.icon:hover {
+  background-color: lightgray;
+}
+
+button.icon:active {
+  background-color: gray;
+}
+
+button.star {
+  background-image: url("icons/star.svg");
+}
+
+button.watch {
+  background-image: url("icons/watch.svg");
+}
+
+button.fork {
+  background-image: url("icons/fork.svg");
 }
