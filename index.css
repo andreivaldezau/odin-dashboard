@@ -6,6 +6,12 @@
   font-style: normal;
 }
 
+:root {
+  --nav-blue: rgb(69, 144, 207);
+  --main-gray: rgb(227, 232, 239);
+  --card-orange: rgb(231, 182, 74);
+}
+
 *,
 *::before,
 *::after {
@@ -61,6 +67,10 @@ h6 {
   text-wrap: balance;
 }
 
+h2 {
+  font-size: large;
+}
+
 body {
   min-height: 100vh;
   display: grid;
@@ -71,7 +81,7 @@ body {
 nav {
   grid-column: 1;
   grid-row: 1 / -1;
-  background-color: rgb(69, 144, 207);
+  background-color: var(--nav-blue);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -102,7 +112,7 @@ nav li {
   font-weight: bold;
 }
 
-.icon-group {
+.icon-and-text {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -113,5 +123,35 @@ header {
 }
 
 main {
-  background-color: rgb(227, 232, 239);
+  background-color: var(--main-gray);
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+main > * {
+  gap: 16px;
+  padding: 16px;
+}
+
+.projects {
+  grid-row: 1 / -1;
+}
+
+.card-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  border-left: 8px solid var(--card-orange);
+  padding: 16px;
+}
+
+.icon-group {
+  display: flex;
 }
