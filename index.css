@@ -10,6 +10,7 @@
   --nav-blue: rgb(69, 144, 207);
   --main-gray: rgb(227, 232, 239);
   --card-orange: rgb(231, 182, 74);
+  --p-gray: rgb(104, 104, 104);
 }
 
 *,
@@ -57,7 +58,9 @@ h6 {
 
 p {
   text-wrap: pretty;
+  color: var(--p-gray);
 }
+
 h1,
 h2,
 h3,
@@ -135,13 +138,17 @@ header {
 main {
   background-color: var(--main-gray);
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: repeat(2, 1fr);
 }
 
 main > * {
   gap: 16px;
   padding: 16px;
+}
+
+.text {
+  padding: 12px;
 }
 
 .projects {
@@ -158,11 +165,26 @@ main > * {
 .card {
   background-color: white;
   border-radius: 8px;
-  border-left: 8px solid var(--card-orange);
   padding: 16px;
   display: flex;
   flex-direction: column;
+}
+
+.projects .card {
+  border-left: 8px solid var(--card-orange);
   justify-content: space-between;
+}
+
+.announcements .card {
+  font-size: small;
+}
+
+hr {
+  color: lightgray;
+}
+
+.trending .card {
+  font-size: small;
 }
 
 .icon-group {
@@ -201,4 +223,14 @@ button.watch {
 
 button.fork {
   background-image: url("icons/fork.svg");
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  height: 48px;
+  width: 48px;
 }
