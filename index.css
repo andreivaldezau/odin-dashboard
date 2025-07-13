@@ -104,7 +104,13 @@ nav li {
 
 .nav-item .icon {
   display: inline;
-  height: 1.5rem;
+  height: 2rem;
+  padding: 0.25rem;
+  filter: invert(100%);
+}
+
+.logo .icon {
+  padding: 0;
 }
 
 .nav-text {
