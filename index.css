@@ -10,10 +10,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif, system-ui;
 }
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -70,6 +72,40 @@ nav {
   grid-column: 1;
   grid-row: 1 / -1;
   background-color: rgb(69, 144, 207);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav li {
+  list-style: none;
+}
+
+.nav-group {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav-item .icon {
+  display: inline;
+  height: 1.5rem;
+}
+
+.nav-text {
+  color: white;
+  font-weight: bold;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 header {
